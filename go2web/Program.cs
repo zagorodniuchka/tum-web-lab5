@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Net.Sockets;
+using System.Net.Security;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.IO;
 
 class Program
 {
@@ -64,20 +66,28 @@ class Program
             var uri = new Uri(url);
             string host = uri.Host;
             string path = string.IsNullOrEmpty(uri.PathAndQuery) ? "/" : uri.PathAndQuery;
-            int port = uri.Port == -1 ? 80 : uri.Port;
+            int port = uri.Port == -1 ? (uri.Scheme == "https" ? 443 : 80) : uri.Port;
 
             using (var client = new TcpClient(host, port))
             using (var stream = client.GetStream())
             {
+                Stream finalStream = stream;
+                if (uri.Scheme == "https")
+                {
+                    var sslStream = new SslStream(stream, false, (sender, certificate, chain, errors) => true);
+                    sslStream.AuthenticateAsClient(host);
+                    finalStream = sslStream;
+                }
+
                 string request = $"GET {path} HTTP/1.1\r\nHost: {host}\r\nConnection: close\r\n\r\n";
                 byte[] requestBytes = Encoding.ASCII.GetBytes(request);
-                stream.Write(requestBytes, 0, requestBytes.Length);
+                finalStream.Write(requestBytes, 0, requestBytes.Length);
 
                 byte[] buffer = new byte[4096];
                 int bytesRead;
                 var responseBuilder = new StringBuilder();
 
-                while ((bytesRead = stream.Read(buffer, 0, buffer.Length)) > 0)
+                while ((bytesRead = finalStream.Read(buffer, 0, buffer.Length)) > 0)
                 {
                     responseBuilder.Append(Encoding.UTF8.GetString(buffer, 0, bytesRead));
                 }
