@@ -1,0 +1,15 @@
+/Users/anastasiazagorodnyuk/Desktop/uni/PWeb/Lab5/go2web/bin/Debug/net8.0/go2web
+/Users/anastasiazagorodnyuk/Desktop/uni/PWeb/Lab5/go2web/bin/Debug/net8.0/go2web.deps.json
+/Users/anastasiazagorodnyuk/Desktop/uni/PWeb/Lab5/go2web/bin/Debug/net8.0/go2web.runtimeconfig.json
+/Users/anastasiazagorodnyuk/Desktop/uni/PWeb/Lab5/go2web/bin/Debug/net8.0/go2web.dll
+/Users/anastasiazagorodnyuk/Desktop/uni/PWeb/Lab5/go2web/bin/Debug/net8.0/go2web.pdb
+/Users/anastasiazagorodnyuk/Desktop/uni/PWeb/Lab5/go2web/obj/Debug/net8.0/go2web.GeneratedMSBuildEditorConfig.editorconfig
+/Users/anastasiazagorodnyuk/Desktop/uni/PWeb/Lab5/go2web/obj/Debug/net8.0/go2web.AssemblyInfoInputs.cache
+/Users/anastasiazagorodnyuk/Desktop/uni/PWeb/Lab5/go2web/obj/Debug/net8.0/go2web.AssemblyInfo.cs
+/Users/anastasiazagorodnyuk/Desktop/uni/PWeb/Lab5/go2web/obj/Debug/net8.0/go2web.csproj.CoreCompileInputs.cache
+/Users/anastasiazagorodnyuk/Desktop/uni/PWeb/Lab5/go2web/obj/Debug/net8.0/go2web.sourcelink.json
+/Users/anastasiazagorodnyuk/Desktop/uni/PWeb/Lab5/go2web/obj/Debug/net8.0/go2web.dll
+/Users/anastasiazagorodnyuk/Desktop/uni/PWeb/Lab5/go2web/obj/Debug/net8.0/refint/go2web.dll
+/Users/anastasiazagorodnyuk/Desktop/uni/PWeb/Lab5/go2web/obj/Debug/net8.0/go2web.pdb
+/Users/anastasiazagorodnyuk/Desktop/uni/PWeb/Lab5/go2web/obj/Debug/net8.0/go2web.genruntimeconfig.cache
+/Users/anastasiazagorodnyuk/Desktop/uni/PWeb/Lab5/go2web/obj/Debug/net8.0/ref/go2web.dll
